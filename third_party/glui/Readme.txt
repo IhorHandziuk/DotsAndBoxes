@@ -1,0 +1,1 @@
+Prebuilt lib from https://bruceoutdoors.wordpress.com/2014/07/02/building-glui-with-vs2013-and-mingw-in-windows/
