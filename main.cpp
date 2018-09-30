@@ -137,14 +137,14 @@ void display ()
 	char winner[100];
 	float norm = 0.0;
 	glColor3f(0.0f,0.0f,0.0f);
-	sprintf_s(score,"first player: %i   second player: %i", f_p_score, s_p_score);
+	sprintf(score,"first player: %i   second player: %i", f_p_score, s_p_score);
 	glRasterPos2f((5-1290.0/(window_width-160))*k,step_H/2);
 	glutBitmapString(GLUT_BITMAP_HELVETICA_18,(unsigned char*)score);
 	if ( f_p_score + s_p_score == box_num)
 	{
-		if (f_p_score > s_p_score) {sprintf_s(winner,"first player won");norm = 110;}
-		else if (f_p_score < s_p_score) {sprintf_s(winner,"second player won"); norm = -40;}
-		else {sprintf_s(winner,"draw"); norm = 560;}
+		if (f_p_score > s_p_score) {sprintf(winner,"first player won");norm = 110;}
+		else if (f_p_score < s_p_score) {sprintf(winner,"second player won"); norm = -40;}
+		else {sprintf(winner,"draw"); norm = 560;}
 		glRasterPos2f((5-(750.0-norm)/(window_width-160))*k,height - step_H/2);
 		glutBitmapString(GLUT_BITMAP_HELVETICA_18,(unsigned char*)winner);
 	}
